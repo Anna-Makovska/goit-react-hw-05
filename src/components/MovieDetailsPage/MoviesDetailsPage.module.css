@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    gap: 50px;
+
+.contentWrapper {
+    flex-direction: column;
+
+}}
