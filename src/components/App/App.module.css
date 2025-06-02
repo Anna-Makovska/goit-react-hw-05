@@ -61,35 +61,28 @@ html {
   }
   
   
+
   .container {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-    
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3e4; /* Світло-бежевий фон */
+    color: #543824; /* Темно-коричневий текст */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрування по горизонталі */
+    padding: 20px;
+    box-sizing: border-box;
   }
   
-  .section {
-    padding-top: 22px;
-    padding-bottom: 22px;
-     
-      scroll-margin-top: 72px; 
-    
+  /* Додаткові стилі для покращення вигляду */
+  .container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #ffcc80, #f48fb1); /* Теплий градієнт зверху */
+    z-index: 10; /* Забезпечує відображення над контентом */
   }
-  
-  @media only screen and (min-width: 1200px) {
-    .container {
-      max-width: 1200px;
-      padding: 0 40px;
-      
-    }
-  
-    .section {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      scroll-margin-top: 80px;
-    }
-  }
-  
-  
   

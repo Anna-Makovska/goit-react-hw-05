@@ -15,17 +15,20 @@ const MovieCast = () => {
     }, [movieId]);
 
     return (
-        <><ul>
-            {cast.map((actor) => (
-                <li key={actor.id}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`} alt={actor.name}
-                    ></img>
-                    <p>{actor.name}</p>
-                    <p>{actor.character}</p>
-                </li>
-            ))}
-        </ul></>
-    )
+      <>
+        <ul className={s.castList}>
+          {cast.map((actor) => (
+            <li key={actor.id} className={s.castItem}>
+              <img
+                src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`}
+                alt={actor.name}
+              ></img>
+              <p>{actor.name}</p>
+              <p>{actor.character}</p>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
 }
 export default MovieCast;

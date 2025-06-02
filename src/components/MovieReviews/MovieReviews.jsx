@@ -18,14 +18,14 @@ const MovieReviews = () => {
     return (
       <>
         {reviews.length === 0 && (
-          <p>We don't have any reviews for this movie.</p>
+          <p className={s.subtitle}>We don't have any reviews for this movie.</p>
         )}
-        <ul>
+        <ul className={s.list}>
           {reviews.map((review) => (
-            <li key={review.id}>
-              <p>{review.author}</p>
-              <p>{review.content}</p>
-                  <p>{new Date(review.updated_at).toLocaleDateString()}</p>
+            <li className={s.item} key={review.id}>
+              <p className={s.subtitleAuthor}>{review.author}</p>
+              <p className={s.subtitleContent}>{review.content}</p>
+                  <p className={s.subtitleDate}>{new Date(review.updated_at).toLocaleDateString()}</p>
             </li>
           ))}
         </ul>

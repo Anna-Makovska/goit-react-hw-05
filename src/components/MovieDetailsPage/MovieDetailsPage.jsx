@@ -27,7 +27,7 @@ const MovieDetailsPage = () => {
     if (!movie) return <p>Loading...</p>;
     return (
       <div className={s.container}>
-        <button onClick={handleGoBack}>
+        <button className={s.button} onClick={handleGoBack}>
           <MdArrowBack />
           Go back
         </button>
@@ -39,32 +39,33 @@ const MovieDetailsPage = () => {
             ></img>
           </div>
           <div className={s.contentWrapper}>
-            <h2>{movie.title}</h2>
-            <p>
-              User Score:{" "}
+            <h2 className={s.Maintitle}>{movie.title}</h2>
+            <p className={s.subtitle}>
+              User Score:
               {Math.round(
                 Math.max(0, Math.min(100, (movie.popularity / 1000) * 1000))
               )}
               %
             </p>
-            <h3>Overview</h3>
-            <p> {movie.overview}</p>
-            <h3> Genres</h3>
-            <ul>
-              {" "}
+            <h3 className={s.title}>Overview</h3>
+            <p className={s.subtitle}> {movie.overview}</p>
+            <h3 className={s.title}> Genres</h3>
+            <ul className={s.list}>
               {movie.genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
+                <li className={s.item} key={genre.id}>
+                  {genre.name}
+                </li>
               ))}
             </ul>
           </div>
         </div>
         <hr style={{ border: "1px solid black", width: "50%" }}></hr>
-        <p>Additional information</p>
-        <ul>
-          <li>
+        <p className={s.subtitle}>Additional information</p>
+        <ul className={s.navList}>
+          <li className={s.navLink}>
             <NavLink to="cast">Cast</NavLink>
           </li>
-          <li>
+          <li className={s.navLink}>
             <NavLink to="reviews">Reviews</NavLink>
           </li>
         </ul>

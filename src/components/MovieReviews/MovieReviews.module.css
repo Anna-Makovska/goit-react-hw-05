@@ -1,0 +1,42 @@
+.subtitle {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #543824;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .subtitleAuthor {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subtitleContent {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .subtitleDate {
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+    text-align: right;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .item {
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6
+  }  
