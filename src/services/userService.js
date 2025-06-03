@@ -64,3 +64,16 @@ export const FetchSearchMovie = async (searchQuery) => {
   );
   return res.data.results;
 }
+
+export const FetchMovieVideo = async (movieId) => {
+  const res = await axios.get(`/movie/${movieId}/videos`,
+    {
+      params: {
+        api_key: API_KEY,
+      },
+    }
+  );
+  return res.data.results;
+}
+    
+

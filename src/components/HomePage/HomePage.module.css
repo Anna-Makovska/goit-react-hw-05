@@ -1,9 +1,23 @@
 .title {
-    color: #e67e22;
-    font-size: 2.5em;
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+  color: #f5c518; 
+  font-size: 3rem;
+  margin: 40px auto 20px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  animation: fadeInSlide 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

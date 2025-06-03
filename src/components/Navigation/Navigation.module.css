@@ -1,24 +1,32 @@
 .header {
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: orange;
-    box-shadow: 2px rgb(151, 218, 107);
+    box-shadow: 2px 2px 5px rgb(151, 218, 107);
     border-radius: 16px;
-}
-.navigation {
-    padding: 50px;
+    padding: 10px 0;
+  }
+  
+  .navigation {
+    padding: 20px;
     display: flex;
     gap: 40px;
-}
-.navlink{
+  }
+  
+  .navlink {
     color: white;
-    font-size: 40px;
-}
-.navlink:hover {
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navlink:hover {
     color: rgb(250, 83, 37);
-}
-.isActive {
+  }
+  
+  .isActive {
     color: orangered;
-}
+  }
+  

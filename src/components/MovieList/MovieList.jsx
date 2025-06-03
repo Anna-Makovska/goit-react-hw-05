@@ -1,9 +1,8 @@
 
 import s from "./MovieList.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
-const MovieList = ({ movies }) => {
-  const location = useLocation();
+const MovieList = ({ movies, from }) => {
 
   return (
     <ul className={s.list}>
@@ -13,10 +12,7 @@ const MovieList = ({ movies }) => {
           className={s.link}
           style={{ animationDelay: `${index * 0.2}s` }}
         >
-          <Link
-            to={`/movies/${movie.id}`}
-            state={{ from: location.pathname + location.search }}
-          >
+          <Link to={`/movies/${movie.id}`} state={{ from: from }}>
             {movie.title}
           </Link>
         </li>

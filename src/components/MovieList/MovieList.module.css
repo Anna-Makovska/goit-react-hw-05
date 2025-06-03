@@ -1,55 +1,62 @@
-@keyframes gentleFloat {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 100%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .link {
-    background-color: #fff8e1;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: gentleFloat 7s infinite alternate ease-in-out;
-    position: relative;
-  }
-  
-  .link:hover {
-    background-color: #f9f3e4;
-    transform: translateY(-3px);
-  }
-  
-  .link a {
-    text-decoration: none;
-    color: #543824;
-    font-weight: bold;
-    font-size: 1.3em;
-    transition: color 0.3s ease;
-  }
-  
-  .link a:hover {
-    color: #e67e22;
-  }
-  
+}
+
+.container {
+  background-color: #ece6c1;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.link {
+  border: 2px solid #888; 
+  display: inline-block; 
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-align: center;
+  transition: color 0.3s ease, box-shadow 0.3s ease; 
+  border-radius: 8px; 
+  margin: 5px 0; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.link:hover {
+  color: #e67e22;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}

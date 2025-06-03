@@ -1,34 +1,46 @@
 .castList {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .castItem {
-    margin: 10px;
-    padding: 15px;
-    background-color: #fff8e1; /* Світлий кремовий фон для елементів */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px; /* Фіксована ширина для всіх елементів */
-  }
-  
-  .castItem img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out; /* Анімація при наведенні */
-  }
-  
-  .castItem img:hover {
-    transform: scale(1.1); /* Збільшення при наведенні */
-  }
-  
-  .castItem p {
-    margin: 5px 0;
-    color: #795548; /* Коричневий колір для тексту */
-  }
-  
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.castItem {
+  margin: 10px;
+  padding: 15px;
+  background-color: #1a1a1a;
+  border: 1px solid #f5c518;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.castItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.castItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  background-color: #333;
+}
+
+.castItem p {
+  margin: 4px 0;
+  font-size: 0.95em;
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+.castItem p:last-of-type {
+  font-size: 0.85em;
+  color: #f5c518;
+}
