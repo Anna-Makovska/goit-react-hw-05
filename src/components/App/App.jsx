@@ -4,15 +4,15 @@ import { lazy, Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 
 const Navigation = lazy(() => import("../Navigation/Navigation"));
-const HomePage = lazy(() => import("../HomePage/HomePage"));
-const MoviesPage = lazy(() => import("../MoviesPage/MoviesPage"));
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
 const MovieList = lazy(() => import("../MovieList/MovieList"));
 const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
 const MovieDetailsPage = lazy(() =>
-  import("../MovieDetailsPage/MovieDetailsPage")
+  import("../../pages/MovieDetailsPage/MovieDetailsPage")
 );
-const NotFoundPage = lazy(() => import("../NotFoundPage/NotFoundPage"));
+const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage"));
 
 function App() {
   return (

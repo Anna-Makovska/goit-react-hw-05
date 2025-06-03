@@ -1,7 +1,7 @@
 import s from "./MoviesPage.module.css";
 import { useState, useEffect } from "react";
 import { FetchSearchMovie } from "../../services/userService";
-import MovieList from "../MovieList/MovieList";
+import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
@@ -19,7 +19,7 @@ const MoviesPage = () => {
     e.preventDefault();
     const trimmedQuery = searchQuery.trim();
     if (trimmedQuery === "") {
-      toast.warn("Please enter a search query!"); 
+      toast.warn("Please enter a search query!");
       return;
     }
     navigate(`?query=${trimmedQuery}`);
@@ -43,7 +43,7 @@ const MoviesPage = () => {
           toast.info("No movies found for your query!");
         }
         setMovies(data);
-      } catch  {
+      } catch {
         toast.error("Failed to fetch movies. Please try again.");
       } finally {
         setLoading(false);

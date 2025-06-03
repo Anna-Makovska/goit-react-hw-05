@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import s from "./HomePage.module.css";
 import { fetchTrendingMovies } from "../../services/userService";
-import MovieList from "../MovieList/MovieList";
+import MovieList from "../../components/MovieList/MovieList";
 import { MoonLoader } from "react-spinners";
 
 const HomePage = () => {
