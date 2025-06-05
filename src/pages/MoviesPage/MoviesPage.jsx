@@ -2,7 +2,7 @@ import s from "./MoviesPage.module.css";
 import { useState, useEffect } from "react";
 import { FetchSearchMovie } from "../../services/userService";
 import MovieList from "../../components/MovieList/MovieList";
-import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,8 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const queryUrl = searchParams.get("query");
   const [loading, setLoading] = useState(false);
 
@@ -22,7 +21,7 @@ const MoviesPage = () => {
       toast.warn("Please enter a search query!");
       return;
     }
-    navigate(`?query=${trimmedQuery}`);
+    setSearchParams({ query: trimmedQuery });
     setSearchQuery("");
   };
 
